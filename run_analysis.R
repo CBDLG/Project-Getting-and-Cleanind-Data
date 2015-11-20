@@ -1,3 +1,15 @@
+## This script contains the function merged_ds () which  creates a tidy data set 
+## with the average of each combination of subject and activity for each of the mean 
+## and stddev variables of the training and test data sets resulting from the 
+## experimient: "Human Activity Recognition Using Smartphones Dataset Version 1.0" 
+## located in https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+## To be able to run the script your working directory needs to have the files X_train, y_train.txt, subject_train.txt, X_test.txt, y_test.txt, subject_test.txt, activity_labels.txt and features.txt.
+## merged_ds () doesn't require additional parameters.
+##
+## A tidy data set (dfmeans) is created with the means of each of the 66 numeric 
+## variables for each combination of subject and activity. 
+## The data set is saved in  "MeansDataSet.txt".
+
 merged_ds <- function () {
         ### Call plyr package    
                 library(plyr)
