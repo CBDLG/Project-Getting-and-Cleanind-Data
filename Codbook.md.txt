@@ -1,0 +1,37 @@
+Codbook
+Experiment background: The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz were captured. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+Raw data
+Each record provided:
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file.
+
+Processed data
+Of the 561 features only means and std dev are part of the scope of this analysis. The 68 variables used are the subjects, the activities , the 33 mean variables and the 33 std dev variables. The training and test sets were merged to produce one set for the analysis.
+Subject: is a numeric value identifying each of the 30 participants.
+Activity: The numeric values representing activities were replaced with the description of the activity ( 1 WALKING, 2 WALKING_UPSTAIRS, 3 WALKING_DOWNSTAIRS, 4 SITTING, 5 STANDING, 6 LAYING).
+The raw features names meet the following rules:
+t -> time domain signals
+f -> frequency domain signals
+Acc -> acceleration signal
+Gravity -> gravity acceleration
+Jerk -> Jerk signal
+Mag ->  Magnitud 
+
+Variables name containing Mag were modified to eliminate the double “Body” string.
+The strings -mean() and -std() were replaced by Mean and Stddev in the new tidy data set.
+
+All these features were normalized and bounded [-1,1] . Thus no units.
+
+
+
+
+
+ 
+
+
